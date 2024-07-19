@@ -91,6 +91,23 @@ body {
   margin-bottom: 0.31em;
 }
 
+.sender {
+  background-color: #3d5365;
+  margin-right: 90px;
+  font-weight: bold;
+  justify-content: left;
+  margin-bottom: 0.31em;
+}
+
+
+.receiver {
+  background-color: #1c9bef;
+  margin-left: 90px;
+  font-weight: bold;
+  justify-content: left;
+  margin-bottom: 0.31em;
+}
+
 .message-text {
   font-size: 1em;
   margin-bottom: 0.31em;
