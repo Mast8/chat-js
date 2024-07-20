@@ -50,11 +50,14 @@ janeSelectorBtn.onclick = () => updateMessageSender('Jane')
 
 const sendMessage = (e) => {
   e.preventDefault()
+  const texts = chatInput.value.trim(); 
+  if(texts.length > 0 ){
 
+  
   const timestamp = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
   const message = {
     sender: messageSender,
-    text: chatInput.value,
+    text: texts,
     timestamp,
   }
 
@@ -70,6 +73,9 @@ const sendMessage = (e) => {
 
   /*  Scroll to bottom of chat messages */
   chatMessages.scrollTop = chatMessages.scrollHeight
+
+  }
+
 }
 
 chatInputForm.addEventListener('submit', sendMessage)
