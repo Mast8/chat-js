@@ -69,6 +69,8 @@ body {
 }
 
 .chat-messages {
+  
+  scrollbar-color: #08529d #15202b;
   height: 23em;
   overflow-y: scroll;
 }
@@ -80,6 +82,7 @@ body {
 .message {
   padding: 0.625em;
   border-radius: 1em;
+  border-left: 10px;
   margin-bottom: 0.625em;
   display: flex;
   flex-direction: column;
@@ -146,3 +149,4 @@ body {
   display: block;
   margin: 2.5em auto;
 }
+
