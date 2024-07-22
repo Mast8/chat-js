@@ -138,15 +138,29 @@ body {
   flex-grow: 1;
 }
 
+button{
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+}
+
 .send-button {
   background-color: #1c9bef;
   color: #fff;
-  font-size: 1em;
-  font-weight: bold;
+}
+
+.send-button:hover {
+  color: #1c9bef;
+  background-color: white;
 }
 
 .clear-chat-button {
+  background-color: rgb(185, 64, 64);
   display: block;
   margin: 2.5em auto;
 }
 
+.clear-chat-button:hover {
+  color: rgb(185, 64, 64);
+  background-color: white;
+}
