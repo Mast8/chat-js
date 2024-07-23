@@ -51,7 +51,7 @@ janeSelectorBtn.onclick = () => updateMessageSender('Jane')
 const sendMessage = (e) => {
   e.preventDefault()
   const texts = chatInput.value.trim(); 
-  if(texts.length > 0 ){
+  if( validation(texts) ){
 
   
   const timestamp = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
@@ -76,6 +76,11 @@ const sendMessage = (e) => {
 
   }
 
+}
+
+function validation(input){
+  
+  return input.length > 2 ;
 }
 
 chatInputForm.addEventListener('submit', sendMessage)
