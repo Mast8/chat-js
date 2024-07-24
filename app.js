@@ -50,14 +50,14 @@ janeSelectorBtn.onclick = () => updateMessageSender('Jane')
 
 const sendMessage = (e) => {
   e.preventDefault()
-  const texts = chatInput.value.trim(); 
-  if( validation(texts) ){
+  const text = chatInput.value.trim(); 
+  if( validation(text) ){
 
   
   const timestamp = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
   const message = {
     sender: messageSender,
-    text: texts,
+    text: text,
     timestamp,
   }
 
@@ -73,14 +73,26 @@ const sendMessage = (e) => {
 
   /*  Scroll to bottom of chat messages */
   chatMessages.scrollTop = chatMessages.scrollHeight
-
+    showError(chatInput, '');
+  }else {
+    showError(chatInput, 'message is too short');
   }
+
 
 }
 
 function validation(input){
-  
   return input.length > 2 ;
+}
+
+function showError(input, message) {
+  console.log(message);
+  const formControl = input.parentElement;
+  formControl.className = 'form-control error';
+
+  const small = formControl.querySelector('small');
+  //console.log(small);
+  small.innerText = message;
 }
 
 chatInputForm.addEventListener('submit', sendMessage)
