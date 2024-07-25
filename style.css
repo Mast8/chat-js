@@ -54,7 +54,6 @@ body {
   padding: 0.5em 1.25em;
   margin: auto;
   max-width: 37.5em;
-  height: 37.5em;
   box-shadow: 0 0 1.25em 0.5em #c3c3c333;
 }
 
@@ -124,8 +123,9 @@ body {
 .chat-input-form {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 2em;
-  gap: 0.625em;
+  
 }
 
 .chat-input {
@@ -165,7 +165,8 @@ button{
   background-color: white;
 }
 
-small {
+.error {
+  display: block;
   color: rgb(185, 64, 64);
 }
 
