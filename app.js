@@ -74,15 +74,19 @@ const sendMessage = (e) => {
   /*  Scroll to bottom of chat messages */
   chatMessages.scrollTop = chatMessages.scrollHeight
     showError(chatInput, '');
-  }else {
-    showError(chatInput, 'message is too short');
-  }
-
-
+  } 
 }
 
 function validation(input){
-  return input.length > 2 ;
+  var res = false;
+  if(input.length == 0)
+    showError(chatInput, 'Message is empty');
+  else if(input.length > 0 && input.length < 2 )
+          showError(chatInput, 'Message is too short');
+        else res =true;
+
+  
+  return res;
 }
 
 function showError(input, message) {
