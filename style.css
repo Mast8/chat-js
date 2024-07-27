@@ -166,6 +166,8 @@ button{
 }
 
 .error {
+  font-size: 1.1em;
+  padding: 5px;
   display: block;
   color: rgb(185, 64, 64);
 }
