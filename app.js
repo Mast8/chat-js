@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 const johnSelectorBtn = document.querySelector('#john-selector')
-const janeSelectorBtn = document.querySelector('#jane-selector')
+const jakySelectorBtn = document.querySelector('#jaky-selector')
 const chatHeader = document.querySelector('.chat-header')
 const chatMessages = document.querySelector('.chat-messages')
 const chatInputForm = document.querySelector('.chat-input-form')
@@ -34,10 +34,10 @@ const updateMessageSender = (name) => {
 
   if (name === 'John') {
     johnSelectorBtn.classList.add('active-person')
-    janeSelectorBtn.classList.remove('active-person')
+    jakySelectorBtn.classList.remove('active-person')
   }
-  if (name === 'Jane') {
-    janeSelectorBtn.classList.add('active-person')
+  if (name === 'Jaky') {
+    jakySelectorBtn.classList.add('active-person')
     johnSelectorBtn.classList.remove('active-person')
   }
 
@@ -46,7 +46,7 @@ const updateMessageSender = (name) => {
 }
 
 johnSelectorBtn.onclick = () => updateMessageSender('John')
-janeSelectorBtn.onclick = () => updateMessageSender('Jane')
+jakySelectorBtn.onclick = () => updateMessageSender('Jaky')
 
 const sendMessage = (e) => {
   e.preventDefault()
